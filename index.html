@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="revisit-after" content="1 day" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<meta name="copyright" content="" />
+		<meta name="company" content="" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="" type="text/css" media="print" />
+		<link rel="alternate" type="application/rss+xml" title="" href="" />
+		<link rel="icon" href="favico.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="favico.ico" type="image/x-icon" />
+		<!-- BEGIN iOS ICONS & META TAGS -->
+		<link rel="apple-touch-icon" href="img/cash_out-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="img/cash_out-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="img/cash_out-icon-114x114.png" />
+		<link rel="apple-touch-startup-image" href="img/cash_out-startup_screen-320x460.png" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<!-- END iOS ICONS & META TAGS -->
+		<style type="text/css" media="print">
+			/* hide superfluous elements when printing */
+			h1, p, #print, #email, #addCheck { display: none; }
+		</style>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="js/cash_out.js"></script>
+		<title>Cash Out</title>
+	</head>
+	<body>
+		
+		<h1>Cash Out</h1>
+		<h2 id="date"></h2>
+		
+		<form action="">
+			<section id="money">
+				<fieldset>
+					<legend>Bills</legend>
+					<ol>
+						<li>
+							<label for="hundreds">$100 &times;</label>
+							<input id="hundreds" type="text" pattern="[0-9]*" />
+						</li>
+						<li>
+							<label for="fifties">$50 &times;</label>
+							<input id="fifties" pattern="[0-9]*" />
+						</li>
+						<li>
+							<label for="twenties">$20 &times;</label>
+							<input id="twenties" pattern="[0-9]*" />
+						</li>
+						<li>
+							<label for="tens">$10 &times;</label>
+							<input id="tens" pattern="[0-9]*" />
+						</li>
+						<li>
+							<label for="fives">$5 &times;</label>
+							<input id="fives" pattern="[0-9]*" />
+						</li>
+						<li>
+							<label for="ones">$1 &times;</label>
+							<input id="ones" pattern="[0-9]*" />
+						</li>
+					</ol>
+				</fieldset>
+				<fieldset>
+					<legend>Coins</legend>
+					<ol>
+						<li>
+							<label for="quarters">25¢ &times;</label>
+							<input id="quarters" pattern="[0-9]*" />
+						</li>
+						<li>
+							<label for="dimes">10¢ &times;</label>
+							<input id="dimes" pattern="[0-9]*" />
+						</li>
+						<li>
+							<label for="nickels">5¢ &times;</label>
+							<input id="nickels" pattern="[0-9]*" />
+						</li>
+						<li>
+							<label for="pennies">1¢ &times;</label>
+							<input id="pennies" pattern="[0-9]*" />
+						</li>
+					</ol>
+				</fieldset>
+				<fieldset>
+					<legend>Checks</legend>
+					<ol id="checksList">
+						<!--
+						<li class="check">
+							<label for="check1">Check Amount</label>
+							<input id="check1" />
+						</li>
+						-->
+					</ol>
+					<input id="addCheck" type="button" value="Add Check" />
+				</fieldset>
+			</section>
+			<section id="tools">
+				<fieldset>
+					<legend>Totals</legend>
+					<ol>
+						<li>
+							<label for="openingBalance">Opening Balance</label>
+							<input id="openingBalance" value="200.00" />
+						</li>
+						<li>
+							<label for="cashBalance">Cash Balance</label>
+							<input id="cashBalance" readonly="readonly" />
+						</li>
+						<li>
+							<label for="checksBalance">Checks Balance</label>
+							<input id="checksBalance" readonly="readonly" />
+						</li>
+						<li>
+							<label for="cashDeposit">Cash Deposit</label>
+							<input id="cashDeposit" readonly="readonly" />
+						</li>
+						<li>
+							<label for="totalDeposit">Total Deposit</label>
+							<input id="totalDeposit" readonly="readonly" />
+							<span id="balanceDeltaDesc"></span>
+						</li>
+					</ol>
+				</fieldset>
+				
+				<fieldset>
+					<input id="print" type="button" value="Print" />
+					<input id="email" type="button" value="Email" />
+				</fieldset>
+			</section>
+		</form>
+		
+		<footer>
+			<p>Sponsored by <a href="http://www.smalldog.com/" title="Small Dog Electronics — Always by your side.">Small Dog Electronics</a>.<br />
+			Fork on <a href="http://github.com/morgant/cash-out">GitHub</a>.</p>
+			<p>Powered by <a href="http://jquery.com/">jQuery</a>. Optimized for <a href="http://www.apple.com/ios/">iOS</a>.</p>
+		</footer>
+		
+	</body>
+</html>
+<!--
+
+The MIT License
+
+Copyright (c) 2007 Morgan Aldridge
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+-->
